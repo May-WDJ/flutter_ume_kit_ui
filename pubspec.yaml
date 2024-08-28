@@ -10,7 +10,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_ume: ">=1.0.0 <2.0.0"
+  flutter_ume: 
+    git:
+      url: https://github.com/May-WDJ/flutter_ume.git
+      ref: develop_nullsafety
   touch_indicator: ^2.0.0
 
   # for Cyclop
