@@ -2,6 +2,7 @@ name: flutter_ume_kit_ui
 description: UI Kits for flutter_ume.
 version: 1.1.1
 homepage: https://github.com/bytedance/flutter_ume
+publish_to: none
 
 environment:
   sdk: ">=3.3.4"
@@ -10,8 +11,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+#  flutter_ume:
+#    path: ../flutter_ume
   flutter_ume:
-    path: ../flutter_ume
+    git:
+      url: https://github.com/May-WDJ/flutter_ume.git
+      ref: dev_flutter_3d38d3
   touch_indicator: ^2.0.0
 
   # for Cyclop
