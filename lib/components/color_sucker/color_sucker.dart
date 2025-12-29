@@ -49,7 +49,10 @@ class _ColorSuckerState extends State<ColorSucker> {
 
   @override
   void initState() {
-    _windowSize = ui.window.physicalSize / ui.window.devicePixelRatio;
+    final view = ui.PlatformDispatcher.instance.implicitView;
+    _windowSize = view != null
+        ? view.physicalSize / view.devicePixelRatio
+        : Size.zero;
     _magnifierSize = widget.size;
     _scale = widget.scale;
     _radius = BorderRadius.circular(_magnifierSize.longestSide);

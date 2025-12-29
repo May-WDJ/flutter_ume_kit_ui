@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_ume_kit_ui/components/hit_test.dart';
 import 'package:flutter_ume/flutter_ume.dart';
-import 'package:flutter_ume_kit_ui/util/binding_ambiguate.dart';
 
 // There was a conflict between the naming of material.SearchBar and ume's SearchBar.
 import 'search_bar.dart' as search_bar;
@@ -45,8 +44,6 @@ class _DetailPage extends StatefulWidget {
 
 class _DetailPageState extends State<_DetailPage> with WidgetsBindingObserver {
   _DetailPageState() : selection = WidgetInspectorService.instance.selection;
-
-  final window = bindingAmbiguate(WidgetsBinding.instance)!.window;
 
   Offset? _lastPointerLocation;
 
